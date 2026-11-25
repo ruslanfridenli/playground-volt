@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Playground Volt — Fractal Forge</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>✦ playground volt — fractal forge</h1><nav class="lang"><button data-lang="en" class="on">EN</button><button data-lang="de">DE</button></nav></header>
+<main><aside class="panel">
+<section><h2 data-i="view">View</h2><div class="btncol">
+<button data-fractal="mandel" data-i="mandel">Mandelbrot</button>
+<button data-fractal="julia" data-i="julia">Julia</button></div></section>
+<section><h2 data-i="controls">Controls</h2><div class="btncol">
+<button id="zoom-in" data-i="zin">＋ Zoom in</button>
+<button id="zoom-out" data-i="zout">－ Zoom out</button>
+<button id="reset" data-i="reset">↺ Reset view</button></div></section>
+<section><h2 data-i="params">Parameters</h2>
+<label><span data-i="iter">Iterations</span><input type="range" id="iter" min="50" max="800" step="10" value="250"></label>
+<label><span data-i="palette">Palette</span><select id="pal"><option value="0">ultraviolet</option><option value="1">ember</option><option value="2">ocean</option><option value="3">candy</option></select></label>
+<label id="julialbl" class="check" style="display:none"><input type="checkbox" id="julia-mode"> <span data-i="juliacheck">Julia set</span></label></section>
+<section class="stats"><span data-i="zoom">Zoom</span> <b id="zoom">1×</b></section>
+</aside><div class="stage"><canvas id="cv"></canvas><div class="hint" data-i="hint">scroll to zoom · drag to pan · click to center</div></div></main>
+<script src="app.js"></script></body></html>
